@@ -1,0 +1,148 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vovozinha do Tarô - Cartomante e Tarô</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        .hero-bg {
+            background-image: url('https://images.unsplash.com/photo-1607604276583-eef5d079aa7f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-purple-800 text-white sticky top-0 z-10">
+        <nav class="container mx-auto p-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Vovozinha do Tarô</h1>
+            <ul class="flex space-x-6">
+                <li><a href="#home" class="hover:text-yellow-300">Início</a></li>
+                <li><a href="#sobre" class="hover:text-yellow-300">Sobre</a></li>
+                <li><a href="#servicos" class="hover:text-yellow-300">Serviços</a></li>
+                <li><a href="#contato" class="hover:text-yellow-300">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg h-screen flex items-center">
+        <div class="container mx-auto text-center text-white">
+            <h2 class="text-5xl font-bold mb-4">Descubra Seu Futuro com o Tarô</h2>
+            <p class="text-xl mb-6">Vovozinha do Tarô guia você com sabedoria e intuição.</p>
+            <a href="#contato" class="bg-yellow-500 text-purple-800 px-6 py-3 rounded-full hover:bg-yellow-400">Agende uma Consulta</a>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="py-16 bg-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold text-purple-800 mb-6">Sobre a Vovozinha</h2>
+            <p class="text-lg text-gray-700 max-w-2xl mx-auto">
+                Com mais de 20 anos de experiência, Vovozinha do Tarô combina intuição, sabedoria e as cartas do tarô para oferecer orientação clara e acolhedora. Minha missão é ajudar você a encontrar respostas para suas dúvidas e iluminar seu caminho.
+            </p>
+        </div>
+    </section>
+
+    <!-- Serviços Section -->
+    <section id="servicos" class="py-16 bg-gray-100">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold text-purple-800 mb-6">Nossos Serviços</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold text-purple-800 mb-4">Leitura de Tarô</h3>
+                    <p class="text-gray-700">Uma leitura personalizada para explorar amor, carreira, saúde e mais.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold text-purple-800 mb-4">Consulta Espiritual</h3>
+                    <p class="text-gray-700">Orientação espiritual para conexão com sua essência e guias.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold text-purple-800 mb-4">Cursos de Tarô</h3>
+                    <p class="text-gray-700">Aprenda a ler as cartas e desenvolver sua intuição com nossos cursos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section id="contato" class="py-16 bg-purple-800 text-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-6">Entre em Contato</h2>
+            <p class="text-lg mb-6 max-w-xl mx-auto">
+                Agende sua consulta ou tire suas dúvidas. Estou aqui para ajudar!
+            </p>
+            <div class="max-w-md mx-auto">
+                <input type="text" placeholder="Nome" class="w-full p-3 mb-4 rounded-lg text-gray-800">
+                <input type="email" placeholder="Email" class="w-full p-3 mb-4 rounded-lg text-gray-800">
+                <textarea placeholder="Mensagem" class="w-full p-3 mb-4 rounded-lg text-gray-800 h-32"></textarea>
+                <button class="bg-yellow-500 text-purple-800 px-6 py-3 rounded-full hover:bg-yellow-400">Enviar</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 Vovozinha do Tarô. Todos os direitos reservados.</p>
+            <p class="mt-2">Feito com 💜 para guiar seu caminho.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
