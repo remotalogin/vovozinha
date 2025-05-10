@@ -1,194 +1,198 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Vovozinha do Tarô oferece leituras de tarô profissionais, consultas espirituais e cursos para orientação e autoconhecimento.">
-    <meta name="keywords" content="tarô, cartomante, leitura de tarô, consulta espiritual, cursos de tarô, autoconhecimento">
-    <meta name="author" content="Vovozinha do Tarô">
-    <title>Vovozinha do Tarô - Leituras e Consultas Profissionais</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Open Sans', sans-serif;
-        }
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-        }
-        .hero-bg {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1607604276583-eef5d079aa7f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-        .animate-fade-in {
-            animation: fadeIn 1s ease-in-out;
-        }
-        @keyframes fadeIn {
-            0% { opacity: 0; transform: translateY(20px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-        .logo {
-            max-height: 50px;
-            transition: transform 0.3s ease;
-        }
-        .logo:hover {
-            transform: scale(1.05);
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Leituras profissionais de Tarô, cursos espirituais e consultas com a Vovozinha do Tarô. Intuição, sabedoria e orientação para sua jornada." />
+  <meta name="keywords" content="tarô, leitura de tarô, cartomante, espiritualidade, curso de tarô, autoconhecimento" />
+  <meta name="author" content="Vovozinha do Tarô" />
+  <meta property="og:title" content="Vovozinha do Tarô - Sabedoria e Intuição" />
+  <meta property="og:description" content="Transforme sua vida com leituras de tarô e cursos espirituais." />
+  <meta property="og:image" content="https://i.pinimg.com/736x/ba/46/cf/ba46cf9378d305d81c4f5a41643781e2.jpg" />
+  <meta property="og:type" content="website" />
+  <title>Vovozinha do Tarô - Leituras e Consultas Profissionais</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+    }
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+    .hero-bg {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('https://images.unsplash.com/photo-1607604276583-eef5d079aa7f?auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+      animation: fadeIn 1s ease-in-out;
+    }
+    .logo {
+      max-height: 50px;
+      transition: transform 0.3s ease;
+    }
+    .logo:hover {
+      transform: scale(1.05);
+    }
+  </style>
 </head>
-<body class="bg-gray-50">
-    <!-- Header -->
-    <header class="bg-gradient-to-r from-purple-900 to-indigo-800 text-white sticky top-0 z-20 shadow-lg">
-        <nav class="container mx-auto p-6 flex justify-between items-center">
-            <div class="flex items-center space-x-4">
-                <img src="logovovo.jpeg" alt="Logo Vovozinha do Tarô" class="logo">
-                <h1 class="text-3xl font-bold">Vovozinha do Tarô</h1>
-            </div>
-            <ul class="hidden md:flex space-x-8 text-lg">
-                <li><a href="#home" class="hover:text-yellow-300 transition-colors duration-300">Início</a></li>
-                <li><a href="#sobre" class="hover:text-yellow-300 transition-colors duration-300">Sobre</a></li>
-                <li><a href="#servicos" class="hover:text-yellow-300 transition-colors duration-300">Serviços</a></li>
-                <li><a href="#depoimentos" class="hover:text-yellow-300 transition-colors duration-300">Depoimentos</a></li>
-                <li><a href="#contato" class="hover:text-yellow-300 transition-colors duration-300">Contato</a></li>
-            </ul>
-            <button class="md:hidden focus:outline-none" onclick="toggleMenu()">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
-        </nav>
-        <div id="mobile-menu" class="hidden md:hidden bg-purple-900 text-white">
-            <ul class="flex flex-col space-y-4 p-6">
-                <li><a href="#home" class="hover:text-yellow-300">Início</a></li>
-                <li><a href="#sobre" class="hover:text-yellow-300">Sobre</a></li>
-                <li><a href="#servicos" class="hover:text-yellow-300">Serviços</a></li>
-                <li><a href="#depoimentos" class="hover:text-yellow-300">Depoimentos</a></li>
-                <li><a href="#contato" class="hover:text-yellow-300">Contato</a></li>
-            </ul>
+
+<body class="bg-gray-50 text-gray-800">
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-purple-900 to-indigo-800 text-white sticky top-0 z-30 shadow-lg">
+    <nav class="container mx-auto p-4 flex justify-between items-center">
+      <div class="flex items-center space-x-3">
+        <img src="logovovo.jpeg" alt="Logo da Vovozinha do Tarô" class="logo" />
+        <span class="text-2xl font-bold">Vovozinha do Tarô</span>
+      </div>
+      <ul class="hidden md:flex space-x-6 text-lg">
+        <li><a href="#home" class="hover:text-yellow-300">Início</a></li>
+        <li><a href="#sobre" class="hover:text-yellow-300">Sobre</a></li>
+        <li><a href="#servicos" class="hover:text-yellow-300">Serviços</a></li>
+        <li><a href="#depoimentos" class="hover:text-yellow-300">Depoimentos</a></li>
+        <li><a href="#contato" class="hover:text-yellow-300">Contato</a></li>
+      </ul>
+      <button class="md:hidden focus:outline-none" onclick="toggleMenu()">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden bg-purple-900">
+      <ul class="flex flex-col space-y-4 p-6 text-white">
+        <li><a href="#home" class="hover:text-yellow-300">Início</a></li>
+        <li><a href="#sobre" class="hover:text-yellow-300">Sobre</a></li>
+        <li><a href="#servicos" class="hover:text-yellow-300">Serviços</a></li>
+        <li><a href="#depoimentos" class="hover:text-yellow-300">Depoimentos</a></li>
+        <li><a href="#contato" class="hover:text-yellow-300">Contato</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero-bg h-screen flex items-center justify-center text-center text-white">
+    <div class="animate-fade-in px-4">
+      <h2 class="text-5xl md:text-6xl font-bold mb-4">Ilumine Seu Caminho com o Tarô</h2>
+      <p class="text-lg md:text-2xl mb-6 max-w-xl mx-auto">Consultas espirituais, leituras intuitivas e cursos transformadores com a Vovozinha do Tarô.</p>
+      <a href="#contato" class="bg-yellow-500 text-purple-900 px-6 py-3 rounded-full font-semibold hover:bg-yellow-400 transition">Agende Sua Consulta</a>
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section id="sobre" class="py-20 bg-white text-center">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-purple-900 mb-10 animate-fade-in">Quem é Vovozinha do Tarô</h2>
+      <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+        <img src="https://i.pinimg.com/736x/ba/46/cf/ba46cf9378d305d81c4f5a41643781e2.jpg" alt="Vovozinha do Tarô" class="rounded-lg shadow-lg w-full md:w-1/3" loading="lazy">
+        <p class="text-lg max-w-xl">Com mais de 20 anos de experiência, a Vovozinha do Tarô guia você com sabedoria, ética e intuição. Suas leituras são profundas, acolhedoras e transformadoras, ajudando no autoconhecimento e clareza de decisões.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <section id="servicos" class="py-20 bg-gray-100 text-center">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-purple-900 mb-12">Nossos Serviços</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
+          <h3 class="text-2xl font-semibold text-purple-800 mb-3">Leitura Personalizada</h3>
+          <p class="text-gray-600">Amor, carreira, saúde e mais. Tiragens exclusivas com orientação profunda.</p>
         </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero-bg h-screen flex items-center justify-center text-center text-white">
-        <div class="container mx-auto px-4 animate-fade-in">
-            <h2 class="text-5xl md:text-6xl font-bold mb-6">Ilumine Seu Caminho com o Tarô</h2>
-            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">Vovozinha do Tarô oferece orientação espiritual e leituras profundas para transformar sua vida.</p>
-            <a href="#contato" class="bg-yellow-500 text-purple-900 px-8 py-4 rounded-full text-lg font-semibold hover:bg-yellow-400 transition-colors duration-300">Agende Sua Consulta</a>
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
+          <h3 class="text-2xl font-semibold text-purple-800 mb-3">Orientação Espiritual</h3>
+          <p class="text-gray-600">Conexão com seus guias e equilíbrio energético para clareza interior.</p>
         </div>
-    </section>
-
-    <!-- Sobre Section -->
-    <section id="sobre" class="py-20 bg-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl md:text-5xl font-bold text-purple-900 mb-8 animate-fade-in">Quem é Vovozinha do Tarô</h2>
-            <div class="flex flex-col md:flex-row items-center md:space-x-12">
-                <img src="https://i.pinimg.com/736x/ba/46/cf/ba46cf9378d305d81c4f5a41643781e2.jpg" alt="Vovozinha do Tarô" class="w-full md:w-1/3 rounded-lg shadow-lg mb-6 md:mb-0">
-                <p class="text-lg text-gray-700 max-w-2xl">
-                    Com mais de duas décadas de prática, Vovozinha do Tarô é uma cartomante renomada que combina intuição afiada, conhecimento esotérico e empatia. Minha abordagem é acolhedora e ética, focada em empoderar você com clareza e confiança para enfrentar os desafios da vida.
-                </p>
-            </div>
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
+          <h3 class="text-2xl font-semibold text-purple-800 mb-3">Cursos de Tarô</h3>
+          <p class="text-gray-600">Aprenda do zero à leitura profissional com aulas online e presenciais.</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Serviços Section -->
-    <section id="servicos" class="py-20 bg-gray-100">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl md:text-5xl font-bold text-purple-900 mb-12 animate-fade-in">Nossos Serviços</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <h3 class="text-2xl font-semibold text-purple-900 mb-4">Leitura de Tarô Personalizada</h3>
-                    <p class="text-gray-600">Explorações detalhadas para amor, carreira, finanças e saúde, com tiragens personalizadas.</p>
-                </div>
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <h3 class="text-2xl font-semibold text-purple-900 mb-4">Orientação Espiritual</h3>
-                    <p class="text-gray-600">Conexão com sua essência e guias espirituais para harmonia e autoconhecimento.</p>
-                </div>
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <h3 class="text-2xl font-semibold text-purple-900 mb-4">Cursos de Tarô</h3>
-                    <p class="text-gray-600">Aprenda a arte do tarô com aulas práticas e teóricas, presenciais ou online.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Depoimentos -->
+  <section id="depoimentos" class="py-20 bg-white text-center">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-purple-900 mb-12">Depoimentos</h2>
+      <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <blockquote class="bg-gray-100 p-6 rounded-lg shadow">
+          <p class="italic text-gray-700">“As leituras da Vovozinha são mágicas! Clareza e direcionamento incríveis.”</p>
+          <footer class="mt-4 font-semibold text-purple-800">— Ana S.</footer>
+        </blockquote>
+        <blockquote class="bg-gray-100 p-6 rounded-lg shadow">
+          <p class="italic text-gray-700">“O curso de Tarô mudou minha vida. Agora leio para mim e para os outros!”</p>
+          <footer class="mt-4 font-semibold text-purple-800">— Marcos R.</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
 
-    <!-- Depoimentos Section -->
-    <section id="depoimentos" class="py-20 bg-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl md:text-5xl font-bold text-purple-900 mb-12 animate-fade-in">O Que Dizem Nossos Clientes</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-                    <p class="text-gray-600 italic">"A leitura da Vovozinha foi incrivelmente precisa e me ajudou a tomar decisões importantes!"</p>
-                    <p class="text-purple-900 font-semibold mt-4">— Ana S.</p>
-                </div>
-                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-                    <p class="text-gray-600 italic">"O curso de tarô foi transformador. Agora leio as cartas com confiança!"</p>
-                    <p class="text-purple-900 font-semibold mt-4">— Marcos R.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Contato -->
+  <section id="contato" class="py-20 bg-gradient-to-r from-purple-900 to-indigo-800 text-white text-center">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold mb-6">Fale Conosco</h2>
+      <p class="mb-10 max-w-xl mx-auto">Agende sua consulta ou tire dúvidas. Preencha o formulário abaixo:</p>
+      <form class="max-w-lg mx-auto space-y-4">
+        <input type="text" placeholder="Nome" required class="w-full p-3 rounded text-gray-800 outline-none focus:ring-2 focus:ring-yellow-400" />
+        <input type="email" placeholder="Email" required class="w-full p-3 rounded text-gray-800 outline-none focus:ring-2 focus:ring-yellow-400" />
+        <textarea placeholder="Mensagem" rows="5" required class="w-full p-3 rounded text-gray-800 outline-none focus:ring-2 focus:ring-yellow-400"></textarea>
+        <button type="submit" class="bg-yellow-500 text-purple-900 px-6 py-3 rounded-full font-semibold hover:bg-yellow-400 transition">Enviar Mensagem</button>
+      </form>
+    </div>
+  </section>
 
-    <!-- Contato Section -->
-    <section id="contato" class="py-20 bg-gradient-to-r from-purple-900 to-indigo-800 text-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl md:text-5xl font-bold mb-8 animate-fade-in">Fale Conosco</h2>
-            <p class="text-lg mb-12 max-w-2xl mx-auto">Entre em contato para agendar uma consulta ou esclarecer suas dúvidas. Estamos prontos para guiá-lo!</p>
-            <div class="max-w-lg mx-auto">
-                <input type="text" placeholder="Nome" class="w-full p-4 mb-4 rounded-lg text-gray-800 focus:ring-2 focus:ring-yellow-500 outline-none">
-                <input type="email" placeholder="Email" class="w-full p-4 mb-4 rounded-lg text-gray-800 focus:ring-2 focus:ring-yellow-500 outline-none">
-                <textarea placeholder="Mensagem" class="w-full p-4 mb-4 rounded-lg text-gray-800 h-40 focus:ring-2 focus:ring-yellow-500 outline-none"></textarea>
-                <button class="bg-yellow-500 text-purple-900 px-8 py-4 rounded-full text-lg font-semibold hover:bg-yellow-400 transition-colors duration-300">Enviar Mensagem</button>
-            </div>
-        </div>
-    </section>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4 grid md:grid-cols-3 gap-8 text-center md:text-left">
+      <div>
+        <h3 class="text-xl font-bold mb-3">Vovozinha do Tarô</h3>
+        <p class="text-gray-400">Sabedoria e orientação espiritual com carinho.</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold mb-3">Navegação</h3>
+        <ul class="space-y-2">
+          <li><a href="#sobre" class="text-gray-400 hover:text-yellow-300">Sobre</a></li>
+          <li><a href="#servicos" class="text-gray-400 hover:text-yellow-300">Serviços</a></li>
+          <li><a href="#contato" class="text-gray-400 hover:text-yellow-300">Contato</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold mb-3">Contato</h3>
+        <p class="text-gray-400">📧 contato@vovozinhadotaro.com</p>
+        <p class="text-gray-400">📱 WhatsApp: (11) 98765-4321</p>
+      </div>
+    </div>
+    <div class="text-center text-gray-500 mt-8 text-sm">
+      © 2025 Vovozinha do Tarô. Todos os direitos reservados.
+    </div>
+  </footer>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-                <h3 class="text-2xl font-bold mb-4">Vovozinha do Tarô</h3>
-                <p class="text-gray-400">Orientação espiritual com sabedoria e empatia.</p>
-            </div>
-            <div>
-                <h3 class="text-2xl font-bold mb-4">Links Rápidos</h3>
-                <ul class="space-y-2">
-                    <li><a href="#sobre" class="text-gray-400 hover:text-yellow-300">Sobre</a></li>
-                    <li><a href="#servicos" class="text-gray-400 hover:text-yellow-300">Serviços</a></li>
-                    <li><a href="#contato" class="text-gray-400 hover:text-yellow-300">Contato</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="text-2xl font-bold mb-4">Contato</h3>
-                <p class="text-gray-400">Email: contato@vovozinhadotaro.com</p>
-                <p class="text-gray-400">WhatsApp: (11) 98765-4321</p>
-            </div>
-        </div>
-        <div class="container mx-auto px-4 mt-8 text-center text-gray-400">
-            <p>© 2025 Vovozinha do Tarô. Todos os direitos reservados.</p>
-        </div>
-    </footer>
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        target.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
 
-    <script>
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+    // Toggle mobile menu
+    function toggleMenu() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    }
 
-        // Mobile menu toggle
-        function toggleMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        }
-
-        // Form submission (placeholder for future backend integration)
-        document.querySelector('button').addEventListener('click', () => {
-            alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
-        });
-    </script>
+    // Placeholder form submit
+    document.querySelector("form").addEventListener("submit", e => {
+      e.preventDefault();
+      alert("Mensagem enviada com sucesso! Retornaremos em breve.");
+    });
+  </script>
 </body>
 </html>
