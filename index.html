@@ -47,20 +47,28 @@
       font-size: 1em;
       max-width: 300px;
     }
+
+    .destaque {
+      font-weight: bold;
+      color: #d81b60;
+    }
   </style>
 </head>
 <body>
 
   <h1>Lojinha da Vovozinha 🔮</h1>
 
-  <button class="btn" onclick="abrirShopee()">Abrir no navegador</button>
+  <button class="btn" onclick="abrirShopee()">Ir para a Shopee</button>
 
-  <p class="alerta">Se nada acontecer, toque nos três pontinhos do TikTok e selecione<br><strong>“Abrir no navegador”</strong></p>
+  <p class="alerta">
+    ⚠️ Se o app da Shopee não abrir,<br>
+    toque nos <span class="destaque">três pontinhos (•••)</span> do TikTok<br>
+    e escolha <span class="destaque">“Abrir no navegador”</span>
+  </p>
 
   <script>
     function abrirShopee() {
-      // Tenta abrir em nova aba (pode falhar no TikTok)
-      window.open("https://s.shopee.com.br/7Kl2YinFYB", "_blank");
+      window.location.href = "https://s.shopee.com.br/7Kl2YinFYB";
     }
   </script>
 
