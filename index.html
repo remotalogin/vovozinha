@@ -5,9 +5,6 @@
   <title>Lojinha da Vovozinha</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Ícones (opcional) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -44,22 +41,25 @@
       transform: scale(1.05);
     }
 
-    .icon {
-      font-size: 3em;
-      margin-bottom: 10px;
-      color: #6a1b9a;
+    .alerta {
+      margin-top: 25px;
+      color: #880e4f;
+      font-size: 1em;
+      max-width: 300px;
     }
   </style>
 </head>
 <body>
 
-  <i class="fas fa-moon icon"></i>
   <h1>Lojinha da Vovozinha 🔮</h1>
 
-  <button class="btn" onclick="abrirEmNovaAba()">Abrir na Shopee</button>
+  <button class="btn" onclick="abrirShopee()">Abrir no navegador</button>
+
+  <p class="alerta">Se nada acontecer, toque nos três pontinhos do TikTok e selecione<br><strong>“Abrir no navegador”</strong></p>
 
   <script>
-    function abrirEmNovaAba() {
+    function abrirShopee() {
+      // Tenta abrir em nova aba (pode falhar no TikTok)
       window.open("https://s.shopee.com.br/7Kl2YinFYB", "_blank");
     }
   </script>
