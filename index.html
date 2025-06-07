@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Lojinha da Vovozinha</title>
+  <title>Lojinha da Vovozinha 🔮</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
@@ -38,24 +38,15 @@
   </style>
 
   <script>
-    // Função para detectar se está dentro do TikTok ou outro WebView
-    function estaEmWebview() {
-      const ua = navigator.userAgent || navigator.vendor || window.opera;
-      return (
-        ua.includes("FBAN") || ua.includes("FBAV") || // Facebook app
-        ua.includes("Instagram") || // Instagram
-        ua.includes("TikTok") || // TikTok
-        (window.navigator.standalone === false) || // iOS Safari webapp
-        (window.matchMedia('(display-mode: standalone)').matches)
-      );
-    }
+    window.onload = function () {
+      const ua = navigator.userAgent.toLowerCase();
+      const emTikTok = ua.includes("tiktok");
 
-    window.onload = function() {
-      // Se NÃO estiver em WebView, redireciona automaticamente para a Shopee
-      if (!estaEmWebview()) {
+      if (!emTikTok) {
+        // Fora do TikTok: redireciona automaticamente para Shopee
         window.location.href = "https://s.shopee.com.br/7Kl2YinFYB";
       }
-      // Se estiver em WebView (TikTok, Instagram, etc.), mostra instrução
+      // Dentro do TikTok: mostra instrução apenas
     };
   </script>
 </head>
@@ -64,10 +55,10 @@
   <h1>Lojinha da Vovozinha 🔮</h1>
 
   <p class="msg">
-    ⚠️ Se o app da Shopee não abrir,<br>
-    toque nos <span class="destaque">três pontinhos (•••)</span> do TikTok<br>
-    e selecione <span class="destaque">“Abrir no navegador”</span><br><br>
-    Assim que abrir no navegador, iremos te levar direto para a loja!
+    ⚠️ Para abrir a loja, toque nos<br>
+    <span class="destaque">três pontinhos (•••)</span> do TikTok<br>
+    e selecione <span class="destaque">“Abrir no navegador”</span>.<br><br>
+    Ao abrir no navegador, a loja vai carregar automaticamente!
   </p>
 
 </body>
