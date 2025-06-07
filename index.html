@@ -1,386 +1,74 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vovózinha do Tarô - Sabedoria Mística</title>
-    <!-- Fontes Google para um toque místico e legível -->
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Icones para o menu hamburguer -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8">
+  <title>Lojinha da Vovozinha</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Ícones (Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #f3e5f5, #ce93d8);
+      color: #4a148c;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 1.8em;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background-color: #8e24aa;
+      border: none;
+      padding: 15px 30px;
+      color: white;
+      font-size: 1.1em;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .btn:hover {
+      background-color: #6a1b9a;
+      transform: scale(1.05);
+    }
+
+    .icon {
+      font-size: 3em;
+      margin-bottom: 15px;
+      color: #6a1b9a;
+    }
+  </style>
 </head>
 <body>
-    <!-- Cabeçalho Principal do Site -->
-    <header class="main-header">
-        <div class="container">
-            <div class="logo">
-                <h1>Vovózinha do Tarô</h1>
-            </div>
-            <!-- Botão do menu hamburguer para mobile -->
-            <button class="hamburger-menu" aria-label="Abrir Menu">
-                <i class="fas fa-bars"></i>
-            </button>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="dicas.html">Dicas de Tarô</a></li>
-                    <li><a href="simpatias.html">Simpatias</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <!-- Conteúdo Principal da Página Inicial -->
-    <main class="container page-content">
-        <section class="hero-section">
-            <div class="hero-text">
-                <h2>Bem-vindos ao Refúgio Místico da Vovózinha do Tarô</h2>
-                <p>Descubra os segredos ancestrais do tarô e encontre a magia nas simpatias que transformam a vida. Caminhos de amor, felicidade e prosperidade esperam por você.</p>
-                <a href="dicas.html" class="cta-button">Explore as Dicas</a>
-            </div>
-            <div class="hero-image">
-                <img src="https://placehold.co/600x400/2a003f/e0c8b3?text=A+Sabedoria+Mistica+da+Vovozinha+do+Taro" alt="Uma imagem mística representando a Vovózinha do Tarô com elementos esotéricos">
-            </div>
-        </section>
+  <i class="fas fa-star-and-crescent icon"></i>
+  <h1>Lojinha da Vovozinha 🔮</h1>
 
-        <section class="featured-sections">
-            <h3>Nossos Destaques</h3>
-            <div class="featured-grid">
-                <div class="featured-card">
-                    <img src="https://placehold.co/300x200/5a2d82/fce4a4?text=Carta+do+Dia" alt="Imagem ilustrativa de uma carta de tarô mística">
-                    <h4>A Carta do Dia</h4>
-                    <p>Qual a mensagem do universo para você hoje? Uma reflexão diária para iluminar seu caminho.</p>
-                    <a href="dicas.html#carta-do-dia" class="read-more">Saiba Mais</a>
-                </div>
-                <div class="featured-card">
-                    <img src="https://placehold.co/300x200/8c005b/f0f8ff?text=Simpatia+do+Amor" alt="Imagem ilustrativa de elementos para simpatia de amor">
-                    <h4>Simpatia para o Amor</h4>
-                    <p>Descubra uma poderosa simpatia para atrair ou fortalecer o amor verdadeiro em sua vida.</p>
-                    <a href="simpatias.html#amor" class="read-more">Ver Simpatia</a>
-                </div>
-                <div class="featured-card">
-                    <img src="https://placehold.co/300x200/004d40/c8e6c9?text=Ritual+Prosperidade" alt="Imagem ilustrativa de elementos para ritual de prosperidade">
-                    <h4>Ritual da Prosperidade</h4>
-                    <p>Crie sua própria energia mágica para atrair abundância e fartura.</p>
-                    <a href="simpatias.html#prosperidade" class="read-more">Ver Simpatia</a>
-                </div>
-            </div>
-        </section>
-    </main>
+  <button class="btn" onclick="abrirShopee()">Abrir na Shopee</button>
 
-    <!-- Rodapé Principal do Site -->
-    <footer class="main-footer">
-        <div class="container">
-            <p>&copy; 2025 Vovózinha do Tarô. Todos os direitos reservados.</p>
-            <!-- Publicidade Shopee - Pequeno banner ou link discreto -->
-            <a href="SEU_LINK_DE_AFILIADO_SHOPEE" target="_blank" class="shopee-ad-link" aria-label="Acesse a Shopee e veja promoções">
-                <img src="https://placehold.co/120x60/ee6c4d/ffffff?text=Shopee+Ad" alt="Anúncio Shopee - Clique Aqui">
-                <span class="shopee-text">Promoções na Shopee!</span>
-            </a>
-        </div>
-    </footer>
+  <script>
+    function abrirShopee() {
+      window.location.href = "https://s.shopee.com.br/7Kl2YinFYB";
+    }
+  </script>
 
-    <script src="js/script.js"></script>
-</body>
-</html>
-
-<!-- Arquivo: dicas.html -->
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dicas de Tarô - Vovózinha do Tarô</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
-    <header class="main-header">
-        <div class="container">
-            <div class="logo">
-                <h1>Vovózinha do Tarô</h1>
-            </div>
-            <button class="hamburger-menu" aria-label="Abrir Menu">
-                <i class="fas fa-bars"></i>
-            </button>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="dicas.html">Dicas de Tarô</a></li>
-                    <li><a href="simpatias.html">Simpatias</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main class="container page-content">
-        <section class="tips-intro">
-            <h2>Desvendando os Mistérios do Tarô</h2>
-            <p>Seja você um iniciante ou alguém em busca de aprofundamento, aqui a Vovózinha compartilha segredos e dicas para uma leitura de tarô mais conectada e intuitiva.</p>
-        </section>
-
-        <section class="tarot-tips-list">
-            <article class="tip-card" id="como-comecar">
-                <h3>Como Começar a Ler Tarô</h3>
-                <img src="https://placehold.co/400x250/2a003f/e0c8b3?text=Preparando+seu+Baralho" alt="Mãos segurando cartas de tarô em um ambiente místico">
-                <p>O tarô é uma ferramenta poderosa de autoconhecimento e orientação. Para começar, é importante se familiarizar com as cartas e com a energia que elas emanam. Não se preocupe em decorar todos os significados de imediato; a prática leva à perfeição.</p>
-                <h4>Passos Iniciais:</h4>
-                <ul>
-                    <li><strong>Escolha seu baralho:</strong> Opte por um baralho que ressoe com você. O Tarô de Marselha e o Rider-Waite são ótimos para iniciantes.</li>
-                    <li><strong>Limpe seu baralho:</strong> Antes da primeira leitura, é bom limpar as energias do baralho. Você pode passar fumaça de incenso, deixar à luz da lua cheia ou bater levemente nas cartas.</li>
-                    <li><strong>Medite com as cartas:</strong> Tire um tempo para observar cada carta, sentir sua energia e intuir seu significado.</li>
-                    <li><strong>Faça leituras simples:</strong> Comece com leituras de uma ou três cartas para perguntas diretas.</li>
-                </ul>
-            </article>
-
-            <article class="tip-card" id="significado-arcanos">
-                <h3>Significado dos Arcanos Maiores</h3>
-                <img src="https://placehold.co/400x250/5a2d82/fce4a4?text=Os+Arcanos+Maiores" alt="Desenhos detalhados de Arcanos Maiores do Tarô com cores vibrantes">
-                <p>Os 22 Arcanos Maiores representam as grandes lições e arquétipos da jornada humana. Cada um deles traz uma mensagem profunda e transformadora. Compreender seus significados é fundamental para uma leitura completa.</p>
-                <h4>Alguns Exemplos:</h4>
-                <ul>
-                    <li><strong>O Louco (0):</strong> Início, liberdade, espontaneidade, riscos.</li>
-                    <li><strong>O Mago (I):</strong> Poder de manifestação, habilidade, concentração.</li>
-                    <li><strong>A Sacerdotisa (II):</strong> Intuição, mistério, sabedoria oculta.</li>
-                    <li><strong>A Imperatriz (III):</strong> Criatividade, fertilidade, abundância, nutrição.</li>
-                    <li><strong>O Imperador (IV):):</strong> Autoridade, estrutura, controle, liderança.</li>
-                </ul>
-                <p>Eles simbolizam as fases da vida, desde o nascimento espiritual até a realização completa. Estude-os com carinho e deixe que sua intuição o guie.</p>
-            </article>
-
-            <article class="tip-card" id="carta-do-dia">
-                <h3>A Carta do Dia: Guia Diário</h3>
-                <img src="https://placehold.co/400x250/8c005b/f0f8ff?text=Sua+Mensagem+Diaria" alt="Mão retirando uma carta de tarô para a leitura do dia">
-                <p>Puxar uma "Carta do Dia" é uma prática simples e poderosa para obter uma orientação rápida para as próximas 24 horas. Ela pode te dar uma ideia do tema central do seu dia, um desafio ou uma benção.</p>
-                <h4>Como Fazer:</h4>
-                <ol>
-                    <li>Respire fundo e centralize-se.</li>
-                    <li>Pense: "Qual a mensagem do universo para mim hoje?"</li>
-                    <li>Embaralhe as cartas com essa intenção.</li>
-                    <li>Corte o baralho ou puxe uma carta intuitivamente.</li>
-                    <li>Reflita sobre o significado da carta em relação aos seus sentimentos e aos eventos do seu dia.</li>
-                </ol>
-            </article>
-        </section>
-    </main>
-
-    <footer class="main-footer">
-        <div class="container">
-            <p>&copy; 2025 Vovózinha do Tarô. Todos os direitos reservados.</p>
-            <a href="SEU_LINK_DE_AFILIADO_SHOPEE" target="_blank" class="shopee-ad-link" aria-label="Acesse a Shopee e veja promoções">
-                <img src="https://placehold.co/120x60/ee6c4d/ffffff?text=Shopee+Ad" alt="Anúncio Shopee - Clique Aqui">
-                <span class="shopee-text">Promoções na Shopee!</span>
-            </a>
-        </div>
-    </footer>
-
-    <script src="js/script.js"></script>
-</body>
-</html>
-
-<!-- Arquivo: simpatias.html -->
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simpatias - Vovózinha do Tarô</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
-    <header class="main-header">
-        <div class="container">
-            <div class="logo">
-                <h1>Vovózinha do Tarô</h1>
-            </div>
-            <button class="hamburger-menu" aria-label="Abrir Menu">
-                <i class="fas fa-bars"></i>
-            </button>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="dicas.html">Dicas de Tarô</a></li>
-                    <li><a href="simpatias.html">Simpatias</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main class="container page-content simpatias-page">
-        <aside class="simpatia-categories">
-            <h3>Categorias de Simpatias</h3>
-            <ul>
-                <li><a href="#amor">Simpatias do Amor</a></li>
-                <li><a href="#felicidade">Simpatias para Felicidade</a></li>
-                <li><a href="#prosperidade">Simpatias para Prosperidade</a></li>
-                <li><a href="#saude">Simpatias para Saúde</a></li>
-                <li><a href="#limpeza">Simpatias de Limpeza Energética</a></li>
-            </ul>
-        </aside>
-
-        <section class="simpatia-list">
-            <h2>Simpatias Mágicas da Vovózinha</h2>
-            <p>Descubra rituais poderosos e simples para atrair o que você deseja para sua vida.</p>
-
-            <article class="simpatia-card" id="amor">
-                <h3 class="category-title">Simpatias do Amor</h3>
-                <div class="simpatia-item">
-                    <h4>Simpatia para Atrair um Amor Verdadeiro</h4>
-                    <img src="https://placehold.co/400x250/d4a5a5/4b0082?text=Amor+Verdadeiro" alt="Elementos para simpatia de amor: rosas, velas e corações">
-                    <p>Esta simpatia é para abrir os caminhos do seu coração e atrair uma alma gêmea ou fortalecer um relacionamento existente com muito amor e paixão.</p>
-                    <div class="items-needed">
-                        <h5>Itens Necessários:</h5>
-                        <ul>
-                            <li>1 vela rosa ou vermelha</li>
-                            <li>1 prato branco</li>
-                            <li>Mel puro</li>
-                            <li>Pétalas de 7 rosas vermelhas frescas</li>
-                            <li>Papel e caneta</li>
-                        </ul>
-                    </div>
-                    <div class="how-to-do">
-                        <h5>Modo de Fazer:</h5>
-                        <ol>
-                            <li>Em um dia de Lua Crescente, escreva o nome da pessoa amada (ou "amor verdadeiro" se ainda não tiver alguém) no papel.</li>
-                            <li>Coloque o papel no centro do prato branco.</li>
-                            <li>Acenda a vela rosa/vermelha e coloque-a sobre o papel no prato.</li>
-                            <li>Despeje o mel sobre a vela e as pétalas de rosa ao redor, mentalizando o amor que você deseja atrair.</li>
-                            <li>Deixe a vela queimar completamente. Os restos podem ser descartados em um jardim ou em água corrente, agradecendo ao universo.</li>
-                        </ol>
-                    </div>
-                </div>
-            </article>
-
-            <article class="simpatia-card" id="felicidade">
-                <h3 class="category-title">Simpatias para Felicidade</h3>
-                <div class="simpatia-item">
-                    <h4>Simpatia para Atrair Alegria e Leveza</h4>
-                    <img src="https://placehold.co/400x250/b0e0e6/8b0000?text=Pura+Alegria" alt="Copo com água, flores coloridas e elementos de alegria">
-                    <p>Ideal para quando você se sente desanimado ou precisa de um impulso de positividade e bem-estar na sua vida diária.</p>
-                    <div class="items-needed">
-                        <h5>Itens Necessários:</h5>
-                        <ul>
-                            <li>1 copo de água limpa</li>
-                            <li>1 punhado de sal grosso</li>
-                            <li>Cascas de 3 laranjas</li>
-                            <li>Um galho de alecrim fresco</li>
-                        </ul>
-                    </div>
-                    <div class="how-to-do">
-                        <h5>Modo de Fazer:</h5>
-                        <ol>
-                            <li>Em uma tigela, coloque a água, o sal grosso, as cascas de laranja e o galho de alecrim.</li>
-                            <li>Mexa bem com uma colher, mentalizando toda a tristeza e o peso indo embora, sendo substituídos por alegria e leveza.</li>
-                            <li>Deixe a mistura repousar por algumas horas em um local tranquilo.</li>
-                            <li>Descarte a água em um ralo ou em um jardim, sentindo que a energia negativa está se esvaindo.</li>
-                        </ol>
-                    </div>
-                </div>
-            </article>
-
-            <article class="simpatia-card" id="prosperidade">
-                <h3 class="category-title">Simpatias para Prosperidade</h3>
-                <div class="simpatia-item">
-                    <h4>Simpatia da Moeda Dourada para Abundância</h4>
-                    <img src="https://placehold.co/400x250/ffd700/800080?text=Caminho+Prospero" alt="Moedas douradas, cristais e elementos de prosperidade">
-                    <p>Esta simpatia simples é poderosa para abrir os caminhos financeiros e atrair prosperidade em todas as áreas da sua vida.</p>
-                    <div class="items-needed">
-                        <h5>Itens Necessários:</h5>
-                        <ul>
-                            <li>1 moeda dourada (qualquer valor)</li>
-                            <li>1 pires ou prato pequeno</li>
-                            <li>Arroz cru (um punhado)</li>
-                            <li>Canela em pó</li>
-                        </ul>
-                    </div>
-                    <div class="how-to-do">
-                        <h5>Modo de Fazer:</h5>
-                        <ol>
-                            <li>No pires, coloque uma camada de arroz cru.</li>
-                            <li>Posicione a moeda dourada sobre o arroz.</li>
-                            <li>Polvilhe canela em pó sobre a moeda e o arroz.</li>
-                            <li>Deixe o pires em um local visível da sua casa ou escritório, como a mesa de trabalho ou uma prateleira, por 7 dias.</li>
-                            <li>No sétimo dia, agradeça pela prosperidade, retire a moeda e use-a para comprar algo que você queira, para fazer a energia circular. Descarte o arroz e a canela na natureza.</li>
-                        </ol>
-                    </div>
-                </div>
-            </article>
-
-            <article class="simpatia-card" id="saude">
-                <h3 class="category-title">Simpatias para Saúde</h3>
-                <div class="simpatia-item">
-                    <h4>Simpatia do Chá de Ervas para Vitalidade</h4>
-                    <img src="https://placehold.co/400x250/a2d2ff/006400?text=Vitalidade+Natural" alt="Xícara de chá fumegante com ervas frescas e elementos de bem-estar">
-                    <p>Uma simpatia natural para fortalecer sua energia vital, promover o bem-estar físico e mental e afastar males.</p>
-                    <div class="items-needed">
-                        <h5>Itens Necessários:</h5>
-                        <ul>
-                            <li>1 copo de água limpa</li>
-                            <li>Folhas frescas de hortelã</li>
-                            <li>Folhas frescas de boldo</li>
-                            <li>Mel (opcional)</li>
-                            <li>Pires ou xícara</li>
-                        </ul>
-                    </div>
-                    <div class="how-to-do">
-                        <h5>Modo de Fazer:</h5>
-                        <ol>
-                            <li>Ferva a água. Quando levantar fervura, desligue o fogo.</li>
-                            <li>Adicione as folhas de hortelã e boldo na água quente.</li>
-                            <li>Deixe em infusão por 5 minutos, com o recipiente tampado para não perder as propriedades.</li>
-                            <li>Coe o chá e, se desejar, adicione mel para adoçar.</li>
-                            <li>Enquanto bebe o chá, mentalize a saúde e a vitalidade preenchendo seu corpo. Faça isso por 7 dias consecutivos.</li>
-                        </ol>
-                    </div>
-                </div>
-            </article>
-
-            <article class="simpatia-card" id="limpeza">
-                <h3 class="category-title">Simpatias de Limpeza Energética</h3>
-                <div class="simpatia-item">
-                    <h4>Banho de Sal Grosso e Arruda</h4>
-                    <img src="https://placehold.co/400x250/5f4b66/c0c0c0?text=Protecao+e+Purificacao" alt="Ervas, sal grosso e pedras em um banho de limpeza">
-                    <p>Este banho poderoso ajuda a remover energias negativas, inveja e mal-olhado, deixando você renovado e protegido.</p>
-                    <div class="items-needed">
-                        <h5>Itens Necessários:</h5>
-                        <ul>
-                            <li>2 litros de água</li>
-                            <li>7 colheres de sopa de sal grosso</li>
-                            <li>1 galho de arruda fresca</li>
-                        </ul>
-                    </div>
-                    <div class="how-to-do">
-                        <h5>Modo de Fazer:</h5>
-                        <ol>
-                            <li>Ferva a água. Quando levantar fervura, desligue o fogo.</li>
-                            <li>Adicione o sal grosso e o galho de arruda na água quente.</li>
-                            <li>Deixe amornar. Coe a mistura, retirando a arruda (que deve ser descartada em um jardim ou lixo).</li>
-                            <li>Após seu banho de higiene normal, derrame a água do pescoço para baixo, mentalizando toda a energia negativa sendo levada embora.</li>
-                            <li>Não se seque com toalha, deixe o corpo secar naturalmente. Faça este banho uma vez por mês ou quando sentir necessidade.</li>
-                        </ol>
-                    </div>
-                </div>
-            </article>
-        </section>
-    </main>
-
-    <footer class="main-footer">
-        <div class="container">
-            <p>&copy; 2025 Vovózinha do Tarô. Todos os direitos reservados.</p>
-            <a href="SEU_LINK_DE_AFILIADO_SHOPEE" target="_blank" class="shopee-ad-link" aria-label="Acesse a Shopee e veja promoções">
-                <img src="https://placehold.co/120x60/ee6c4d/ffffff?text=Shopee+Ad" alt="Anúncio Shopee - Clique Aqui">
-                <span class="shopee-text">Promoções na Shopee!</span>
-            </a>
-        </div>
-    </footer>
-
-    <script src="js/script.js"></script>
 </body>
 </html>
