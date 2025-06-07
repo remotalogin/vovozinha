@@ -5,16 +5,10 @@
   <title>Lojinha da Vovozinha</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Ícones (Font Awesome) -->
+  <!-- Ícones (opcional) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
 
+  <style>
     body {
       font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(to bottom right, #f3e5f5, #ce93d8);
@@ -29,7 +23,7 @@
     }
 
     h1 {
-      font-size: 1.8em;
+      font-size: 2em;
       margin-bottom: 20px;
     }
 
@@ -38,7 +32,7 @@
       border: none;
       padding: 15px 30px;
       color: white;
-      font-size: 1.1em;
+      font-size: 1.2em;
       border-radius: 12px;
       cursor: pointer;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
@@ -52,21 +46,21 @@
 
     .icon {
       font-size: 3em;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
       color: #6a1b9a;
     }
   </style>
 </head>
 <body>
 
-  <i class="fas fa-star-and-crescent icon"></i>
+  <i class="fas fa-moon icon"></i>
   <h1>Lojinha da Vovozinha 🔮</h1>
 
-  <button class="btn" onclick="abrirShopee()">Abrir na Shopee</button>
+  <button class="btn" onclick="abrirEmNovaAba()">Abrir na Shopee</button>
 
   <script>
-    function abrirShopee() {
-      window.location.href = "https://s.shopee.com.br/7Kl2YinFYB";
+    function abrirEmNovaAba() {
+      window.open("https://s.shopee.com.br/7Kl2YinFYB", "_blank");
     }
   </script>
 
