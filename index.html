@@ -1,198 +1,184 @@
+<!-- Arquivo: index.html -->
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Leituras profissionais de Tarô, cursos espirituais e consultas com a Vovozinha do Tarô. Intuição, sabedoria e orientação para sua jornada." />
-  <meta name="keywords" content="tarô, leitura de tarô, cartomante, espiritualidade, curso de tarô, autoconhecimento" />
-  <meta name="author" content="Vovozinha do Tarô" />
-  <meta property="og:title" content="Vovozinha do Tarô - Sabedoria e Intuição" />
-  <meta property="og:description" content="Transforme sua vida com leituras de tarô e cursos espirituais." />
-  <meta property="og:image" content="https://i.pinimg.com/736x/ba/46/cf/ba46cf9378d305d81c4f5a41643781e2.jpg" />
-  <meta property="og:type" content="website" />
-  <title>Vovozinha do Tarô - Leituras e Consultas Profissionais</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      font-family: 'Open Sans', sans-serif;
-    }
-    h1, h2, h3 {
-      font-family: 'Playfair Display', serif;
-    }
-    .hero-bg {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('https://images.unsplash.com/photo-1607604276583-eef5d079aa7f?auto=format&fit=crop&w=1920&q=80');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-    }
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-    .animate-fade-in {
-      animation: fadeIn 1s ease-in-out;
-    }
-    .logo {
-      max-height: 50px;
-      transition: transform 0.3s ease;
-    }
-    .logo:hover {
-      transform: scale(1.05);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vovózinha do Tarô - Sabedoria Mística</title>
+    <!-- Fontes Google para um toque místico e legível -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Icones para o menu hamburguer -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-
-<body class="bg-gray-50 text-gray-800">
-  <!-- Header -->
-  <header class="bg-gradient-to-r from-purple-900 to-indigo-800 text-white sticky top-0 z-30 shadow-lg">
-    <nav class="container mx-auto p-4 flex justify-between items-center">
-      <div class="flex items-center space-x-3">
-        <img src="logovovo.jpeg" alt="Logo da Vovozinha do Tarô" class="logo" />
-        <span class="text-2xl font-bold">Vovozinha do Tarô</span>
-      </div>
-      <ul class="hidden md:flex space-x-6 text-lg">
-        <li><a href="#home" class="hover:text-yellow-300">Início</a></li>
-        <li><a href="#sobre" class="hover:text-yellow-300">Sobre</a></li>
-        <li><a href="#servicos" class="hover:text-yellow-300">Serviços</a></li>
-        <li><a href="#depoimentos" class="hover:text-yellow-300">Depoimentos</a></li>
-        <li><a href="#contato" class="hover:text-yellow-300">Contato</a></li>
-      </ul>
-      <button class="md:hidden focus:outline-none" onclick="toggleMenu()">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-        </svg>
-      </button>
-    </nav>
-    <div id="mobile-menu" class="hidden md:hidden bg-purple-900">
-      <ul class="flex flex-col space-y-4 p-6 text-white">
-        <li><a href="#home" class="hover:text-yellow-300">Início</a></li>
-        <li><a href="#sobre" class="hover:text-yellow-300">Sobre</a></li>
-        <li><a href="#servicos" class="hover:text-yellow-300">Serviços</a></li>
-        <li><a href="#depoimentos" class="hover:text-yellow-300">Depoimentos</a></li>
-        <li><a href="#contato" class="hover:text-yellow-300">Contato</a></li>
-      </ul>
-    </div>
-  </header>
-
-  <!-- Hero -->
-  <section id="home" class="hero-bg h-screen flex items-center justify-center text-center text-white">
-    <div class="animate-fade-in px-4">
-      <h2 class="text-5xl md:text-6xl font-bold mb-4">Ilumine Seu Caminho com o Tarô</h2>
-      <p class="text-lg md:text-2xl mb-6 max-w-xl mx-auto">Consultas espirituais, leituras intuitivas e cursos transformadores com a Vovozinha do Tarô.</p>
-      <a href="#contato" class="bg-yellow-500 text-purple-900 px-6 py-3 rounded-full font-semibold hover:bg-yellow-400 transition">Agende Sua Consulta</a>
-    </div>
-  </section>
-
-  <!-- Sobre -->
-  <section id="sobre" class="py-20 bg-white text-center">
-    <div class="container mx-auto px-4">
-      <h2 class="text-4xl font-bold text-purple-900 mb-10 animate-fade-in">Quem é Vovozinha do Tarô</h2>
-      <div class="flex flex-col md:flex-row items-center justify-center gap-8">
-        <img src="https://i.pinimg.com/736x/ba/46/cf/ba46cf9378d305d81c4f5a41643781e2.jpg" alt="Vovozinha do Tarô" class="rounded-lg shadow-lg w-full md:w-1/3" loading="lazy">
-        <p class="text-lg max-w-xl">Com mais de 20 anos de experiência, a Vovozinha do Tarô guia você com sabedoria, ética e intuição. Suas leituras são profundas, acolhedoras e transformadoras, ajudando no autoconhecimento e clareza de decisões.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Serviços -->
-  <section id="servicos" class="py-20 bg-gray-100 text-center">
-    <div class="container mx-auto px-4">
-      <h2 class="text-4xl font-bold text-purple-900 mb-12">Nossos Serviços</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
-          <h3 class="text-2xl font-semibold text-purple-800 mb-3">Leitura Personalizada</h3>
-          <p class="text-gray-600">Amor, carreira, saúde e mais. Tiragens exclusivas com orientação profunda.</p>
+<body>
+    <!-- Cabeçalho Principal do Site -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1>Vovózinha do Tarô</h1>
+            </div>
+            <!-- Botão do menu hamburguer para mobile -->
+            <button class="hamburger-menu" aria-label="Abrir Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="dicas.html">Dicas de Tarô</a></li>
+                    <li><a href="simpatias.html">Simpatias</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
-          <h3 class="text-2xl font-semibold text-purple-800 mb-3">Orientação Espiritual</h3>
-          <p class="text-gray-600">Conexão com seus guias e equilíbrio energético para clareza interior.</p>
+    </header>
+
+    <!-- Conteúdo Principal da Página Inicial -->
+    <main class="container page-content">
+        <section class="hero-section">
+            <div class="hero-text">
+                <h2>Bem-vindos ao Refúgio Místico da Vovózinha do Tarô</h2>
+                <p>Descubra os segredos ancestrais do tarô e encontre a magia nas simpatias que transformam a vida. Caminhos de amor, felicidade e prosperidade esperam por você.</p>
+                <a href="dicas.html" class="cta-button">Explore as Dicas</a>
+            </div>
+            <div class="hero-image">
+                <img src="https://placehold.co/600x400/2a003f/e0c8b3?text=A+Sabedoria+Mistica+da+Vovozinha+do+Taro" alt="Uma imagem mística representando a Vovózinha do Tarô com elementos esotéricos">
+            </div>
+        </section>
+
+        <section class="featured-sections">
+            <h3>Nossos Destaques</h3>
+            <div class="featured-grid">
+                <div class="featured-card">
+                    <img src="https://placehold.co/300x200/5a2d82/fce4a4?text=Carta+do+Dia" alt="Imagem ilustrativa de uma carta de tarô mística">
+                    <h4>A Carta do Dia</h4>
+                    <p>Qual a mensagem do universo para você hoje? Uma reflexão diária para iluminar seu caminho.</p>
+                    <a href="dicas.html#carta-do-dia" class="read-more">Saiba Mais</a>
+                </div>
+                <div class="featured-card">
+                    <img src="https://placehold.co/300x200/8c005b/f0f8ff?text=Simpatia+do+Amor" alt="Imagem ilustrativa de elementos para simpatia de amor">
+                    <h4>Simpatia para o Amor</h4>
+                    <p>Descubra uma poderosa simpatia para atrair ou fortalecer o amor verdadeiro em sua vida.</p>
+                    <a href="simpatias.html#amor" class="read-more">Ver Simpatia</a>
+                </div>
+                <div class="featured-card">
+                    <img src="https://placehold.co/300x200/004d40/c8e6c9?text=Ritual+Prosperidade" alt="Imagem ilustrativa de elementos para ritual de prosperidade">
+                    <h4>Ritual da Prosperidade</h4>
+                    <p>Crie sua própria energia mágica para atrair abundância e fartura.</p>
+                    <a href="simpatias.html#prosperidade" class="read-more">Ver Simpatia</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé Principal do Site -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Vovózinha do Tarô. Todos os direitos reservados.</p>
+            <!-- Publicidade Shopee - Pequeno banner ou link discreto -->
+            <a href="SEU_LINK_DE_AFILIADO_SHOPEE" target="_blank" class="shopee-ad-link" aria-label="Acesse a Shopee e veja promoções">
+                <img src="https://placehold.co/120x60/ee6c4d/ffffff?text=Shopee+Ad" alt="Anúncio Shopee - Clique Aqui">
+                <span class="shopee-text">Promoções na Shopee!</span>
+            </a>
         </div>
-        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
-          <h3 class="text-2xl font-semibold text-purple-800 mb-3">Cursos de Tarô</h3>
-          <p class="text-gray-600">Aprenda do zero à leitura profissional com aulas online e presenciais.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+<!-- Arquivo: dicas.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dicas de Tarô - Vovózinha do Tarô</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1>Vovózinha do Tarô</h1>
+            </div>
+            <button class="hamburger-menu" aria-label="Abrir Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="dicas.html">Dicas de Tarô</a></li>
+                    <li><a href="simpatias.html">Simpatias</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
         </div>
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- Depoimentos -->
-  <section id="depoimentos" class="py-20 bg-white text-center">
-    <div class="container mx-auto px-4">
-      <h2 class="text-4xl font-bold text-purple-900 mb-12">Depoimentos</h2>
-      <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-        <blockquote class="bg-gray-100 p-6 rounded-lg shadow">
-          <p class="italic text-gray-700">“As leituras da Vovozinha são mágicas! Clareza e direcionamento incríveis.”</p>
-          <footer class="mt-4 font-semibold text-purple-800">— Ana S.</footer>
-        </blockquote>
-        <blockquote class="bg-gray-100 p-6 rounded-lg shadow">
-          <p class="italic text-gray-700">“O curso de Tarô mudou minha vida. Agora leio para mim e para os outros!”</p>
-          <footer class="mt-4 font-semibold text-purple-800">— Marcos R.</footer>
-        </blockquote>
-      </div>
-    </div>
-  </section>
+    <main class="container page-content">
+        <section class="tips-intro">
+            <h2>Desvendando os Mistérios do Tarô</h2>
+            <p>Seja você um iniciante ou alguém em busca de aprofundamento, aqui a Vovózinha compartilha segredos e dicas para uma leitura de tarô mais conectada e intuitiva.</p>
+        </section>
 
-  <!-- Contato -->
-  <section id="contato" class="py-20 bg-gradient-to-r from-purple-900 to-indigo-800 text-white text-center">
-    <div class="container mx-auto px-4">
-      <h2 class="text-4xl font-bold mb-6">Fale Conosco</h2>
-      <p class="mb-10 max-w-xl mx-auto">Agende sua consulta ou tire dúvidas. Preencha o formulário abaixo:</p>
-      <form class="max-w-lg mx-auto space-y-4">
-        <input type="text" placeholder="Nome" required class="w-full p-3 rounded text-gray-800 outline-none focus:ring-2 focus:ring-yellow-400" />
-        <input type="email" placeholder="Email" required class="w-full p-3 rounded text-gray-800 outline-none focus:ring-2 focus:ring-yellow-400" />
-        <textarea placeholder="Mensagem" rows="5" required class="w-full p-3 rounded text-gray-800 outline-none focus:ring-2 focus:ring-yellow-400"></textarea>
-        <button type="submit" class="bg-yellow-500 text-purple-900 px-6 py-3 rounded-full font-semibold hover:bg-yellow-400 transition">Enviar Mensagem</button>
-      </form>
-    </div>
-  </section>
+        <section class="tarot-tips-list">
+            <article class="tip-card" id="como-comecar">
+                <h3>Como Começar a Ler Tarô</h3>
+                <img src="https://placehold.co/400x250/2a003f/e0c8b3?text=Preparando+seu+Baralho" alt="Mãos segurando cartas de tarô em um ambiente místico">
+                <p>O tarô é uma ferramenta poderosa de autoconhecimento e orientação. Para começar, é importante se familiarizar com as cartas e com a energia que elas emanam. Não se preocupe em decorar todos os significados de imediato; a prática leva à perfeição.</p>
+                <h4>Passos Iniciais:</h4>
+                <ul>
+                    <li><strong>Escolha seu baralho:</strong> Opte por um baralho que ressoe com você. O Tarô de Marselha e o Rider-Waite são ótimos para iniciantes.</li>
+                    <li><strong>Limpe seu baralho:</strong> Antes da primeira leitura, é bom limpar as energias do baralho. Você pode passar fumaça de incenso, deixar à luz da lua cheia ou bater levemente nas cartas.</li>
+                    <li><strong>Medite com as cartas:</strong> Tire um tempo para observar cada carta, sentir sua energia e intuir seu significado.</li>
+                    <li><strong>Faça leituras simples:</strong> Comece com leituras de uma ou três cartas para perguntas diretas.</li>
+                </ul>
+            </article>
 
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-white py-12">
-    <div class="container mx-auto px-4 grid md:grid-cols-3 gap-8 text-center md:text-left">
-      <div>
-        <h3 class="text-xl font-bold mb-3">Vovozinha do Tarô</h3>
-        <p class="text-gray-400">Sabedoria e orientação espiritual com carinho.</p>
-      </div>
-      <div>
-        <h3 class="text-xl font-bold mb-3">Navegação</h3>
-        <ul class="space-y-2">
-          <li><a href="#sobre" class="text-gray-400 hover:text-yellow-300">Sobre</a></li>
-          <li><a href="#servicos" class="text-gray-400 hover:text-yellow-300">Serviços</a></li>
-          <li><a href="#contato" class="text-gray-400 hover:text-yellow-300">Contato</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="text-xl font-bold mb-3">Contato</h3>
-        <p class="text-gray-400">📧 contato@vovozinhadotaro.com</p>
-        <p class="text-gray-400">📱 WhatsApp: (11) 98765-4321</p>
-      </div>
-    </div>
-    <div class="text-center text-gray-500 mt-8 text-sm">
-      © 2025 Vovozinha do Tarô. Todos os direitos reservados.
-    </div>
-  </footer>
+            <article class="tip-card" id="significado-arcanos">
+                <h3>Significado dos Arcanos Maiores</h3>
+                <img src="https://placehold.co/400x250/5a2d82/fce4a4?text=Os+Arcanos+Maiores" alt="Desenhos detalhados de Arcanos Maiores do Tarô com cores vibrantes">
+                <p>Os 22 Arcanos Maiores representam as grandes lições e arquétipos da jornada humana. Cada um deles traz uma mensagem profunda e transformadora. Compreender seus significados é fundamental para uma leitura completa.</p>
+                <h4>Alguns Exemplos:</h4>
+                <ul>
+                    <li><strong>O Louco (0):</strong> Início, liberdade, espontaneidade, riscos.</li>
+                    <li><strong>O Mago (I):</strong> Poder de manifestação, habilidade, concentração.</li>
+                    <li><strong>A Sacerdotisa (II):</strong> Intuição, mistério, sabedoria oculta.</li>
+                    <li><strong>A Imperatriz (III):</strong> Criatividade, fertilidade, abundância, nutrição.</li>
+                    <li><strong>O Imperador (IV):</strong> Autoridade, estrutura, controle, liderança.</li>
+                </ul>
+                <p>Eles simbolizam as fases da vida, desde o nascimento espiritual até a realização completa. Estude-os com carinho e deixe que sua intuição o guie.</p>
+            </article>
 
-  <script>
-    // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
-      link.addEventListener('click', e => {
-        e.preventDefault();
-        const target = document.querySelector(link.getAttribute('href'));
-        target.scrollIntoView({ behavior: 'smooth' });
-      });
-    });
+            <article class="tip-card" id="carta-do-dia">
+                <h3>A Carta do Dia: Guia Diário</h3>
+                <img src="https://placehold.co/400x250/8c005b/f0f8ff?text=Sua+Mensagem+Diaria" alt="Mão retirando uma carta de tarô para a leitura do dia">
+                <p>Puxar uma "Carta do Dia" é uma prática simples e poderosa para obter uma orientação rápida para as próximas 24 horas. Ela pode te dar uma ideia do tema central do seu dia, um desafio ou uma benção.</p>
+                <h4>Como Fazer:</h4>
+                <ol>
+                    <li>Respire fundo e centralize-se.</li>
+                    <li>Pense: "Qual a mensagem do universo para mim hoje?"</li>
+                    <li>Embaralhe as cartas com essa intenção.</li>
+                    <li>Corte o baralho ou puxe uma carta intuitivamente.</li>
+                    <li>Reflita sobre o significado da carta em relação aos seus sentimentos e aos eventos do seu dia.</li>
+                </ol>
+            </article>
+        </section>
+    </main>
 
-    // Toggle mobile menu
-    function toggleMenu() {
-      document.getElementById('mobile-menu').classList.toggle('hidden');
-    }
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Vovózinha do Tarô. Todos os direitos reservados.</p>
+            <a href="SEU_LINK_DE_AFILIADO_SHOPEE" target="_blank" class="shopee-ad-link" aria-label="Acesse a Shopee e veja promoções">
+                <img src="https://placehold.co/120x60/ee6c4d/ffffff?text=Shopee+Ad" alt="Anúncio Shopee - Clique Aqui">
+                <span class="shopee-text">Promoções na Shopee!</span>
+            </a>
+        </div>
+    </footer>
 
-    // Placeholder form submit
-    document.querySelector("form").addEventListener("submit", e => {
-      e.preventDefault();
-      alert("Mensagem enviada com sucesso! Retornaremos em breve.");
-    });
-  </script>
+    <script src="js/script.js"></script>
 </body>
 </html>
