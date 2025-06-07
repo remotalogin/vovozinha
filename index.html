@@ -21,30 +21,13 @@
 
     h1 {
       font-size: 2em;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
 
-    .btn {
-      background-color: #8e24aa;
-      border: none;
-      padding: 15px 30px;
-      color: white;
-      font-size: 1.2em;
-      border-radius: 12px;
-      cursor: pointer;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      transition: background 0.3s, transform 0.2s;
-    }
-
-    .btn:hover {
-      background-color: #6a1b9a;
-      transform: scale(1.05);
-    }
-
-    .alerta {
-      margin-top: 25px;
-      color: #880e4f;
+    .msg {
       font-size: 1em;
+      color: #880e4f;
+      margin-top: 15px;
       max-width: 300px;
     }
 
@@ -53,24 +36,39 @@
       color: #d81b60;
     }
   </style>
+
+  <script>
+    // Função para detectar se está dentro do TikTok ou outro WebView
+    function estaEmWebview() {
+      const ua = navigator.userAgent || navigator.vendor || window.opera;
+      return (
+        ua.includes("FBAN") || ua.includes("FBAV") || // Facebook app
+        ua.includes("Instagram") || // Instagram
+        ua.includes("TikTok") || // TikTok
+        (window.navigator.standalone === false) || // iOS Safari webapp
+        (window.matchMedia('(display-mode: standalone)').matches)
+      );
+    }
+
+    window.onload = function() {
+      // Se NÃO estiver em WebView, redireciona automaticamente para a Shopee
+      if (!estaEmWebview()) {
+        window.location.href = "https://s.shopee.com.br/7Kl2YinFYB";
+      }
+      // Se estiver em WebView (TikTok, Instagram, etc.), mostra instrução
+    };
+  </script>
 </head>
 <body>
 
   <h1>Lojinha da Vovozinha 🔮</h1>
 
-  <button class="btn" onclick="abrirShopee()">Ir para a Shopee</button>
-
-  <p class="alerta">
+  <p class="msg">
     ⚠️ Se o app da Shopee não abrir,<br>
     toque nos <span class="destaque">três pontinhos (•••)</span> do TikTok<br>
-    e escolha <span class="destaque">“Abrir no navegador”</span>
+    e selecione <span class="destaque">“Abrir no navegador”</span><br><br>
+    Assim que abrir no navegador, iremos te levar direto para a loja!
   </p>
-
-  <script>
-    function abrirShopee() {
-      window.location.href = "https://s.shopee.com.br/7Kl2YinFYB";
-    }
-  </script>
 
 </body>
 </html>
